@@ -65,7 +65,7 @@ app.get("/callback", async (req, res) => {
     // Redirect back to the frontend with tokens in URL parameters
     const scopes = data.scope; // Extract scopes
     res.redirect(
-      `http://localhost:5173/emotion-detection?access_token=${data.access_token}&refresh_token=${data.refresh_token}&scope=${scopes}`
+      `https://facify-frontend.vercel.app/emotion-detection/emotion-detection?access_token=${data.access_token}&refresh_token=${data.refresh_token}&scope=${scopes}`
     );
   } catch (error) {
     console.error("Error fetching Spotify token:", error);
